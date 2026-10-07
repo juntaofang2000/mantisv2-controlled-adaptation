@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mantisv2-controlled-adaptation"
+version = "0.1.0"
+description = "Matched frozen/full/scratch adaptation study for official MantisV2"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "mantis-tsfm @ git+https://github.com/vfeofanov/mantis.git@0c94f8ceb9f1d1421dd292ed917090df8c31605b",
+  "matplotlib>=3.7,<4",
+  "numpy>=1.23,<3",
+  "pandas>=1.5,<3",
+  "scikit-learn>=1.2,<2",
+  "torch>=2.0,<3",
+]
+
+[project.optional-dependencies]
+archive = ["aeon>=1.0,<2"]
+test = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+include = ["mantis_adaptation*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

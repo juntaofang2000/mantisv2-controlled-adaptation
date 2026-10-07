@@ -1,0 +1,5 @@
+dataset,source,path,archive
+Coffee,local,/absolute/path/to/benchmark/Coffee,UCR
+BasicMotions,local,/absolute/path/to/benchmark/BasicMotions,UEA
+GunPoint,aeon,,UCR
+
